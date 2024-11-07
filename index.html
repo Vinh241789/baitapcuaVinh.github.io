@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giày nhà Vinh</title>
+    <style>
+        /* Định dạng tổng thể */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Header */
+        header {
+            background-color: #8DEEEE;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        /* Menu chính */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #eee;
+        }
+
+        /* Các mục menu */
+        .navbar a {
+            background-color: #8DEEEE;
+            padding: 15px 20px;
+            display: block;
+            color: black;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        /* Hiệu ứng khi di chuột vào menu */
+        .navbar a:hover {
+            color: blue;
+            background-color: gray;
+        }
+
+        /* Menu con cho mục "Sản phẩm" */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Menu con hiển thị khi di chuột vào */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Hiệu ứng chuyển động ảnh từ phải qua trái */
+        .image-slider {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 40px 0;
+            background-color: #8DEEEE;
+            padding: 10px;
+        }
+
+        .slider-content {
+            display: inline-flex;
+            animation: slide 20s linear infinite;
+        }
+
+        .slider-content img {
+            width: 500px;
+            height: 350px;
+            margin: 0 10px;
+        }
+
+        /* Keyframe để tạo hiệu ứng chuyển động ảnh */
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Phần góp ý */
+        .feedback {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 4px;
+        }
+
+        .feedback input, .feedback button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="color: #FF5733;">Giày Sneaker</header>
+
+    <!-- Thanh điều hướng -->
+    <div class="navbar">
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+
+        <!-- Menu Sản phẩm với menu con -->
+        <div class="dropdown">
+            <a href="#">Sản phẩm</a>
+            <div class="dropdown-content">
+                <a href="#">Giày Nam</a>
+                <a href="#">Giày Nữ</a>
+            </div>
+        </div>
+
+        <a href="#">Hỏi đáp</a>
+        <a href="#">Liên hệ</a>
+    </div>
+
+    <!-- Chuyển động ảnh từ phải qua trái -->
+    <div class="image-slider">
+        <div class="slider-content">
+            <img src="724ed1af4420154aed1a3daad453431c.jpg_720x720q80.jpg"> 
+        </div>
+    </div>
+
+    <!-- Phần góp ý -->
+    <div class="feedback">
+       
+        <h2 style="color: rgb(47, 113, 255);">Góp ý</h2> 
+        <input type="text" placeholder="Some text...">
+        <input type="text" placeholder="Upcoming Events">
+        <input type="text" placeholder="Visit Our Blog">
+        <button>Gửi ý kiến</button>
+    </div>
+
+</body>
+</html>
